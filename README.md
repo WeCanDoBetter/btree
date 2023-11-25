@@ -16,15 +16,15 @@ npm i @wecandobetter/btree
 
 ## Usage
 
-> ⚠️ Not all functionality is implemented yet. This is a work in progress.
+> ⚠️ Not all functionality is implemented yet.
 
 ```ts
 import { BTree, type Comparator, type Selector } from "@wecandobetter/btree";
 
 const tree = new BTree<string, string>({
   t: 2, // The minimum degree of the tree. Must be >= 2.
-  comparator: (a, b) => a.localeCompare(b),
-  selector: (a) => a,
+  comparator: (a, b) => a.localeCompare(b), // the comparator function to use for sorting keys
+  selector: (a) => a, // the selector function to use to select the value from the input
 });
 
 // Insert a value into the tree.
@@ -42,7 +42,7 @@ code, please open an issue first to discuss your idea.
 
 ## License
 
-OQL is licensed under the [MIT License](LICENSE).
+This library is licensed under the [MIT License](LICENSE).
 
 ## Links
 
